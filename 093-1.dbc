@@ -1,0 +1,247 @@
+VERSION "ks-tornado-dbc (
+* 26 frames on can basic layer - ADAC P3
+* 18.01.24 09:47:48.010)"
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ADAC_P3 Vector__XXX
+
+BO_ 532 ECU_0x214: 8 Vector__XXX
+ SG_ aCyl2_lead : 23|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+ SG_ aCyl3_lead : 39|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+ SG_ aCyl1_lead : 7|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+ SG_ aCyl4_lead : 55|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+
+BO_ 524 ECU_0x20C: 8 Vector__XXX
+ SG_ aCyl3_timeL : 39|16@0+ (1,0) [0|0] "us" Vector__XXX
+ SG_ aCyl2_timeL : 23|16@0+ (1,0) [0|0] "us" Vector__XXX
+ SG_ aCyl4_timeL : 55|16@0+ (1,0) [0|0] "us" Vector__XXX
+ SG_ aCyl1_timeL : 7|16@0+ (1,0) [0|0] "us" Vector__XXX
+
+BO_ 568 ECU_0x238: 8 Vector__XXX
+ SG_ EGT2 : 55|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+ SG_ CHT1 : 7|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+ SG_ EGT1 : 39|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+ SG_ CHT2 : 23|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+
+BO_ 596 ECU_0x254: 8 Vector__XXX
+ SG_ mgFuelAvailable_L : 55|16@0+ (1,0) [0|0] "mg" Vector__XXX
+ SG_ cmgFuelCons_L : 23|16@0+ (1,0) [0|0] "mg" Vector__XXX
+
+BO_ 516 ECU_0x204: 8 Vector__XXX
+ SG_ cntRevs : 7|16@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ cntGapErrs : 55|16@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ cntSmotErrs : 23|16@0+ (1,0) [0|0] "-" Vector__XXX
+
+BO_ 548 ECU_0x224: 8 Vector__XXX
+ SG_ kInjBancoAll : 7|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+ SG_ ddgAdvBancoAll : 23|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+
+BO_ 536 ECU_0x218: 8 Vector__XXX
+ SG_ ddgFaseBaseL : 39|16@0- (1,0) [0|0] "deg" Vector__XXX
+ SG_ ddgFase : 23|16@0- (1,0) [0|0] "deg" Vector__XXX
+ SG_ ddgAdvBase : 7|16@0- (0.1,0) [0|0] "deg" Vector__XXX
+
+BO_ 560 ECU_0x230: 8 Vector__XXX
+ SG_ usInjTransTengine : 39|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ usInjTrans : 55|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ ddgAdvPair : 23|16@0- (1,0) [0|0] "deg" Vector__XXX
+ SG_ kInjPair : 7|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+
+BO_ 556 ECU_0x22C: 8 Vector__XXX
+ SG_ kInjTEngine : 7|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+ SG_ kInjTair : 39|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+ SG_ ddgAdvTair : 55|16@0- (1,0) [0|0] "deg" Vector__XXX
+
+BO_ 636 ECU_0x27C: 8 Vector__XXX
+ SG_ ddgAdvTcht2 : 23|16@0- (1,0) [0|0] "deg" Vector__XXX
+ SG_ ddgAdvTegt2 : 55|16@0- (1,0) [0|0] "deg" Vector__XXX
+ SG_ ddgAdvTcht1 : 7|16@0- (1,0) [0|0] "deg" Vector__XXX
+ SG_ ddgAdvTegt1 : 39|16@0- (1,0) [0|0] "deg" Vector__XXX
+
+BO_ 584 ECU_0x248: 8 Vector__XXX
+ SG_ idMap : 7|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ ecuTemp : 23|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+
+BO_ 612 ECU_0x264: 8 Vector__XXX
+ SG_ Digital_IOs : 39|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Error_Flags1 : 31|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Engine_Flags : 7|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Error_Flags : 23|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Engine_Flags1 : 15|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Digital_IOs1 : 47|8@0+ (1,0) [0|0] "-" Vector__XXX
+
+BO_ 600 ECU_0x258: 8 Vector__XXX
+ SG_ gHrsFuelCons_L : 23|16@0+ (1,0) [0|0] "g/h" Vector__XXX
+ SG_ gHrsFuelCons_H : 7|16@0+ (1,0) [0|0] "g/h" Vector__XXX
+
+BO_ 552 ECU_0x228: 8 Vector__XXX
+ SG_ usInjVbatL : 39|16@0+ (1,0) [0|0] "us" Vector__XXX
+ SG_ usDwell : 23|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ kInjCrank : 7|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+
+BO_ 588 ECU_0x24C: 8 Vector__XXX
+ SG_ TPS_Position : 23|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ kInjTcht1 : 39|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+ SG_ kInjTcht2 : 55|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+ SG_ TPS_Demand : 7|16@0+ (0.1,0) [0|0] "-" Vector__XXX
+
+BO_ 592 ECU_0x250: 8 Vector__XXX
+ SG_ kInjTegt1 : 39|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+ SG_ kInjTegt2 : 55|16@0+ (0.001,0) [0|0] "-" Vector__XXX
+
+BO_ 256 ECU_0x100: 8 ADAC_P3
+ SG_ TPS : 7|16@0+ (1,0) [0|0] "-" Vector__XXX
+
+BO_ 576 ECU_0x240: 8 Vector__XXX
+ SG_ valTair : 39|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+ SG_ TPS_Pos : 7|16@0- (0.1,0) [0|0] "%" Vector__XXX
+
+BO_ 528 ECU_0x210: 8 Vector__XXX
+ SG_ usInjBase : 7|16@0+ (1,0) [0|0] "us" Vector__XXX
+
+BO_ 572 ECU_0x23C: 8 Vector__XXX
+ SG_ valEngineTemp : 55|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+ SG_ valTh2o : 7|16@0- (0.1,0) [0|0] "�C" Vector__XXX
+
+BO_ 512 ECU_0x200: 8 Vector__XXX
+ SG_ valMrpm_raw : 7|16@0+ (1,0) [0|0] "1/min" Vector__XXX
+ SG_ valMrpm : 39|16@0+ (1,0) [0|0] "1/min" Vector__XXX
+
+BO_ 580 ECU_0x244: 8 Vector__XXX
+ SG_ valPair : 7|16@0- (1,0) [0|0] "mbar" Vector__XXX
+ SG_ valVbat : 39|16@0- (0.1,0) [0|0] "V" Vector__XXX
+
+BO_ 604 ECU_0x25C: 8 Vector__XXX
+ SG_ pickup1IsFault : 23|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ currentUsedPickup : 55|16@0- (1,0) [0|0] "-" Vector__XXX
+ SG_ DiagPickupStatus : 7|16@0- (1,0) [0|0] "-" Vector__XXX
+
+BO_ 608 ECU_0x260: 8 Vector__XXX
+ SG_ cntSmotPulserPickup1 : 7|16@0- (1,0) [0|0] "-" Vector__XXX
+
+BO_ 616 ECU_0x268: 8 Vector__XXX
+ SG_ Trigger_Inhibition_Flags : 7|8@0+ (1,0) [0|0] "-" Vector__XXX
+ SG_ MAP_Tuning_Flags : 31|8@0+ (1,0) [0|0] "-" Vector__XXX
+
+BO_ 620 ECU_0x26C: 8 Vector__XXX
+ SG_ Output_Diag : 7|16@0- (1,0) [0|0] "-" Vector__XXX
+
+
+BO_TX_BU_ 532 : Vector__XXX;
+BO_TX_BU_ 524 : Vector__XXX;
+BO_TX_BU_ 568 : Vector__XXX;
+BO_TX_BU_ 596 : Vector__XXX;
+BO_TX_BU_ 516 : Vector__XXX;
+BO_TX_BU_ 548 : Vector__XXX;
+BO_TX_BU_ 536 : Vector__XXX;
+BO_TX_BU_ 560 : Vector__XXX;
+BO_TX_BU_ 556 : Vector__XXX;
+BO_TX_BU_ 636 : Vector__XXX;
+BO_TX_BU_ 584 : Vector__XXX;
+BO_TX_BU_ 612 : Vector__XXX;
+BO_TX_BU_ 600 : Vector__XXX;
+BO_TX_BU_ 552 : Vector__XXX;
+BO_TX_BU_ 588 : Vector__XXX;
+BO_TX_BU_ 592 : Vector__XXX;
+BO_TX_BU_ 256 : ADAC_P3;
+BO_TX_BU_ 576 : Vector__XXX;
+BO_TX_BU_ 528 : Vector__XXX;
+BO_TX_BU_ 572 : Vector__XXX;
+BO_TX_BU_ 512 : Vector__XXX;
+BO_TX_BU_ 580 : Vector__XXX;
+BO_TX_BU_ 604 : Vector__XXX;
+BO_TX_BU_ 608 : Vector__XXX;
+BO_TX_BU_ 616 : Vector__XXX;
+BO_TX_BU_ 620 : Vector__XXX;
+
+
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING;
+BA_DEF_  "ProtocolType" STRING;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclicX","spontanX";
+BA_DEF_ BO_  "VFrameFormat" ENUM "CAN","CAN_FD";
+
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "VFrameFormat" "CAN";
+
+BA_ "Baudrate" 0;
+
+BA_ "GenMsgCycleTime" BO_ 256 20;
+BA_ "GenMsgSendType" BO_ 256 0;
+
+
+SIG_VALTYPE_ 532 aCyl2_lead : 0;
+SIG_VALTYPE_ 532 aCyl3_lead : 0;
+SIG_VALTYPE_ 532 aCyl1_lead : 0;
+SIG_VALTYPE_ 532 aCyl4_lead : 0;
+SIG_VALTYPE_ 568 EGT2 : 0;
+SIG_VALTYPE_ 568 CHT1 : 0;
+SIG_VALTYPE_ 568 EGT1 : 0;
+SIG_VALTYPE_ 568 CHT2 : 0;
+SIG_VALTYPE_ 548 ddgAdvBancoAll : 0;
+SIG_VALTYPE_ 536 ddgFaseBaseL : 0;
+SIG_VALTYPE_ 536 ddgFase : 0;
+SIG_VALTYPE_ 536 ddgAdvBase : 0;
+SIG_VALTYPE_ 560 usInjTransTengine : 0;
+SIG_VALTYPE_ 560 usInjTrans : 0;
+SIG_VALTYPE_ 560 ddgAdvPair : 0;
+SIG_VALTYPE_ 556 ddgAdvTair : 0;
+SIG_VALTYPE_ 636 ddgAdvTcht2 : 0;
+SIG_VALTYPE_ 636 ddgAdvTegt2 : 0;
+SIG_VALTYPE_ 636 ddgAdvTcht1 : 0;
+SIG_VALTYPE_ 636 ddgAdvTegt1 : 0;
+SIG_VALTYPE_ 584 idMap : 0;
+SIG_VALTYPE_ 584 ecuTemp : 0;
+SIG_VALTYPE_ 552 usDwell : 0;
+SIG_VALTYPE_ 588 TPS_Position : 0;
+SIG_VALTYPE_ 576 valTair : 0;
+SIG_VALTYPE_ 576 TPS_Pos : 0;
+SIG_VALTYPE_ 572 valEngineTemp : 0;
+SIG_VALTYPE_ 572 valTh2o : 0;
+SIG_VALTYPE_ 580 valPair : 0;
+SIG_VALTYPE_ 580 valVbat : 0;
+SIG_VALTYPE_ 604 pickup1IsFault : 0;
+SIG_VALTYPE_ 604 currentUsedPickup : 0;
+SIG_VALTYPE_ 604 DiagPickupStatus : 0;
+SIG_VALTYPE_ 608 cntSmotPulserPickup1 : 0;
+SIG_VALTYPE_ 620 Output_Diag : 0;
+
+
+
+
+

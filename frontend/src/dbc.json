@@ -1,0 +1,874 @@
+[
+  {
+    "id": 532,
+    "name": "ECU_0x214",
+    "length": 8,
+    "signals": [
+      {
+        "name": "aCyl2_lead",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "aCyl3_lead",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "aCyl1_lead",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "aCyl4_lead",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "deg"
+      }
+    ]
+  },
+  {
+    "id": 524,
+    "name": "ECU_0x20C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "aCyl3_timeL",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "us"
+      },
+      {
+        "name": "aCyl2_timeL",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "us"
+      },
+      {
+        "name": "aCyl4_timeL",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "us"
+      },
+      {
+        "name": "aCyl1_timeL",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "us"
+      }
+    ]
+  },
+  {
+    "id": 568,
+    "name": "ECU_0x238",
+    "length": 8,
+    "signals": [
+      {
+        "name": "EGT2",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      },
+      {
+        "name": "CHT1",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      },
+      {
+        "name": "EGT1",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      },
+      {
+        "name": "CHT2",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      }
+    ]
+  },
+  {
+    "id": 596,
+    "name": "ECU_0x254",
+    "length": 8,
+    "signals": [
+      {
+        "name": "mgFuelAvailable_L",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "mg"
+      },
+      {
+        "name": "cmgFuelCons_L",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "mg"
+      }
+    ]
+  },
+  {
+    "id": 516,
+    "name": "ECU_0x204",
+    "length": 8,
+    "signals": [
+      {
+        "name": "cntRevs",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "cntGapErrs",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "cntSmotErrs",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 548,
+    "name": "ECU_0x224",
+    "length": 8,
+    "signals": [
+      {
+        "name": "kInjBancoAll",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "ddgAdvBancoAll",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "deg"
+      }
+    ]
+  },
+  {
+    "id": 536,
+    "name": "ECU_0x218",
+    "length": 8,
+    "signals": [
+      {
+        "name": "ddgFaseBaseL",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "ddgFase",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "ddgAdvBase",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "deg"
+      }
+    ]
+  },
+  {
+    "id": 560,
+    "name": "ECU_0x230",
+    "length": 8,
+    "signals": [
+      {
+        "name": "usInjTransTengine",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "usInjTrans",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "ddgAdvPair",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "kInjPair",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 556,
+    "name": "ECU_0x22C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "kInjTEngine",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "kInjTair",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "ddgAdvTair",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      }
+    ]
+  },
+  {
+    "id": 636,
+    "name": "ECU_0x27C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "ddgAdvTcht2",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "ddgAdvTegt2",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "ddgAdvTcht1",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      },
+      {
+        "name": "ddgAdvTegt1",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "deg"
+      }
+    ]
+  },
+  {
+    "id": 584,
+    "name": "ECU_0x248",
+    "length": 8,
+    "signals": [
+      {
+        "name": "idMap",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "ecuTemp",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      }
+    ]
+  },
+  {
+    "id": 612,
+    "name": "ECU_0x264",
+    "length": 8,
+    "signals": [
+      {
+        "name": "Digital_IOs",
+        "startBit": 39,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "Error_Flags1",
+        "startBit": 31,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "Engine_Flags",
+        "startBit": 7,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "Error_Flags",
+        "startBit": 23,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "Engine_Flags1",
+        "startBit": 15,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "Digital_IOs1",
+        "startBit": 47,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 600,
+    "name": "ECU_0x258",
+    "length": 8,
+    "signals": [
+      {
+        "name": "gHrsFuelCons_L",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "g/h"
+      },
+      {
+        "name": "gHrsFuelCons_H",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "g/h"
+      }
+    ]
+  },
+  {
+    "id": 552,
+    "name": "ECU_0x228",
+    "length": 8,
+    "signals": [
+      {
+        "name": "usInjVbatL",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "us"
+      },
+      {
+        "name": "usDwell",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "kInjCrank",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 588,
+    "name": "ECU_0x24C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "TPS_Position",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "kInjTcht1",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "kInjTcht2",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "TPS_Demand",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 592,
+    "name": "ECU_0x250",
+    "length": 8,
+    "signals": [
+      {
+        "name": "kInjTegt1",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "kInjTegt2",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 0.001,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 256,
+    "name": "ECU_0x100",
+    "length": 8,
+    "signals": [
+      {
+        "name": "TPS",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 576,
+    "name": "ECU_0x240",
+    "length": 8,
+    "signals": [
+      {
+        "name": "valTair",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      },
+      {
+        "name": "TPS_Pos",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "%"
+      }
+    ]
+  },
+  {
+    "id": 528,
+    "name": "ECU_0x210",
+    "length": 8,
+    "signals": [
+      {
+        "name": "usInjBase",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "us"
+      }
+    ]
+  },
+  {
+    "id": 572,
+    "name": "ECU_0x23C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "valEngineTemp",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      },
+      {
+        "name": "valTh2o",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "°C"
+      }
+    ]
+  },
+  {
+    "id": 512,
+    "name": "ECU_0x200",
+    "length": 8,
+    "signals": [
+      {
+        "name": "valMrpm_raw",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "1/min"
+      },
+      {
+        "name": "valMrpm",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "1/min"
+      }
+    ]
+  },
+  {
+    "id": 580,
+    "name": "ECU_0x244",
+    "length": 8,
+    "signals": [
+      {
+        "name": "valPair",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "mbar"
+      },
+      {
+        "name": "valVbat",
+        "startBit": 39,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 0.1,
+        "offset": 0,
+        "unit": "V"
+      }
+    ]
+  },
+  {
+    "id": 604,
+    "name": "ECU_0x25C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "pickup1IsFault",
+        "startBit": 23,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "currentUsedPickup",
+        "startBit": 55,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "DiagPickupStatus",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 608,
+    "name": "ECU_0x260",
+    "length": 8,
+    "signals": [
+      {
+        "name": "cntSmotPulserPickup1",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 616,
+    "name": "ECU_0x268",
+    "length": 8,
+    "signals": [
+      {
+        "name": "Trigger_Inhibition_Flags",
+        "startBit": 7,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      },
+      {
+        "name": "MAP_Tuning_Flags",
+        "startBit": 31,
+        "length": 8,
+        "isUnsigned": true,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  },
+  {
+    "id": 620,
+    "name": "ECU_0x26C",
+    "length": 8,
+    "signals": [
+      {
+        "name": "Output_Diag",
+        "startBit": 7,
+        "length": 16,
+        "isUnsigned": false,
+        "isLittleEndian": false,
+        "scale": 1,
+        "offset": 0,
+        "unit": "-"
+      }
+    ]
+  }
+]

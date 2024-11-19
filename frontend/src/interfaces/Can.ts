@@ -1,15 +1,19 @@
-export interface CanData {
-  id: string;
+export interface CanFrame {
+  id: number;
   length: number;
-  data0: number;
-  data1: number;
-  data2: number;
-  data3: number;
-  data4: number;
-  data5: number;
-  data6: number;
-  data7: number;
+  data: number[];
   isRTR: number;
   isExtended: number;
   frequency: number;
+}
+
+export interface CanMessage extends CanFrame {
+  name: string;
+  signals: CanMessageSignal[];
+}
+
+export interface CanMessageSignal {
+  name: string;
+  value: number;
+  unit: string;
 }

@@ -1,10 +1,10 @@
-import { CanData } from "../interfaces/Can";
+import { CanFrame } from "../../interfaces/can";
 
 type Props = {
-  data: CanData;
+  data: CanFrame;
 };
 
-function ListItem({ data }: Props) {
+function CanFrameItem({ data }: Props) {
   const binaryDataFieldClass = () => {
     return "font-mono bg-gray-700 rounded px-2";
   };
@@ -34,7 +34,7 @@ function ListItem({ data }: Props) {
           </div>
         </div>
         <div className="flex flex-col text-left gap-1 w-24">
-          <span>{data.id}</span>
+          <span>0x{data.id.toString(16).toUpperCase()}</span>
           <span>{data.length}</span>
           <span>{data.frequency}Hz</span>
         </div>
@@ -47,10 +47,10 @@ function ListItem({ data }: Props) {
           <span>4:</span>
         </div>
         <div className="flex flex-col text-left gap-1">
-          <span className={binaryDataFieldClass()}>{data.data0.toString(2).padStart(8, "0")}</span>
-          <span className={binaryDataFieldClass()}>{data.data1.toString(2).padStart(8, "0")}</span>
-          <span className={binaryDataFieldClass()}>{data.data2.toString(2).padStart(8, "0")}</span>
-          <span className={binaryDataFieldClass()}>{data.data3.toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[0].toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[1].toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[2].toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[3].toString(2).padStart(8, "0")}</span>
         </div>
       </div>
       <div id="dataRow2" className="flex text-left gap-1 mr-2">
@@ -61,14 +61,14 @@ function ListItem({ data }: Props) {
           <span>8:</span>
         </div>
         <div className="flex flex-col text-left gap-1">
-          <span className={binaryDataFieldClass()}>{data.data4.toString(2).padStart(8, "0")}</span>
-          <span className={binaryDataFieldClass()}>{data.data5.toString(2).padStart(8, "0")}</span>
-          <span className={binaryDataFieldClass()}>{data.data6.toString(2).padStart(8, "0")}</span>
-          <span className={binaryDataFieldClass()}>{data.data7.toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[4].toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[5].toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[6].toString(2).padStart(8, "0")}</span>
+          <span className={binaryDataFieldClass()}>{data.data[7].toString(2).padStart(8, "0")}</span>
         </div>
       </div>
     </div>
   );
 }
 
-export default ListItem;
+export default CanFrameItem;

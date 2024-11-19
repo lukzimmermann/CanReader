@@ -1,7 +1,7 @@
-import { CanData } from "../interfaces/Can";
+import { CanFrame } from "../interfaces/can";
 
 type Props = {
-  data: CanData[];
+  data: CanFrame[];
 };
 
 function Table({ data }: Props) {
