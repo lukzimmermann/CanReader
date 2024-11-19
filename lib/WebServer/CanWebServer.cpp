@@ -211,6 +211,9 @@ String CanWebServer::canDataToJson() {
 
     pos += snprintf(json + pos, bufferSize - pos, "[");
     for (int i = 0; i < messageLength; i++) {
+        if (messages[i].id == -1) {
+            break;
+        }
         pos += snprintf(json + pos, bufferSize - pos, "{");
         pos += snprintf(json + pos, bufferSize - pos, "\"id\":%lu,",
                         messages[i].id);
@@ -223,7 +226,7 @@ String CanWebServer::canDataToJson() {
                             messages[i].data[j]);
         }
         if (messages[i].length > 0) {
-            pos--;  // Remove trailing comma
+            pos--;
         }
         pos += snprintf(json + pos, bufferSize - pos, "],");
 
@@ -236,7 +239,7 @@ String CanWebServer::canDataToJson() {
         pos += snprintf(json + pos, bufferSize - pos, "},");
     }
     if (messageLength > 0) {
-        pos--;  // Remove trailing comma
+        pos--;
     }
     pos += snprintf(json + pos, bufferSize - pos, "]");
 
