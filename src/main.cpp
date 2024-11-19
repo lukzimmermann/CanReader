@@ -8,10 +8,7 @@
 #include "SPIFFS.h"
 #include "config.h"
 
-unsigned int counter = 0;
-
 AsyncWebServer server(80);
-
 CanBus canBus;
 
 void setup() {
@@ -113,7 +110,7 @@ void setup() {
         request->send(200, "application/json", jsonString);
     });
 
-    server.on("/delete-file", HTTP_POST, [](AsyncWebServerRequest* request) {
+    server.on("/delete-file", HTTP_DELETE, [](AsyncWebServerRequest* request) {
         // Check if the filename parameter is provided
         if (!request->hasParam("filename", true)) {
             request->send(400, "application/json",

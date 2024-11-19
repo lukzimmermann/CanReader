@@ -40,27 +40,47 @@ void CanBus::update() {
 }
 
 String CanBus::getCanDataJson() {
-    String json = "[";
+    const unsigned long startTime = micros();
+
+    const int bufferSize = 8024;
+    char json[bufferSize];
+    int pos = 0;
+
+    pos += snprintf(json + pos, bufferSize - pos, "[");
     for (int i = 0; i < messageLength; i++) {
-        json.concat("{");
-        json.concat("\"id\": " + String(messages[i].id) + ",");
-        json.concat("\"length\": " + String(messages[i].length) + ",");
-        json.concat("\"data\": [");
+        pos += snprintf(json + pos, bufferSize - pos, "{");
+        pos += snprintf(json + pos, bufferSize - pos, "\"id\":%u,",
+                        messages[i].id);
+        pos += snprintf(json + pos, bufferSize - pos, "\"length\":%u,",
+                        messages[i].length);
+
+        pos += snprintf(json + pos, bufferSize - pos, "\"data\":[");
         for (int j = 0; j < messages[i].length; j++) {
-            json.concat(String(messages[i].data[j]) + ",");
+            pos += snprintf(json + pos, bufferSize - pos, "%u,",
+                            messages[i].data[j]);
         }
-        json.remove(json.length() - 1);
-        json.concat("],");
-        json.concat("\"isRTR\": " + String(messages[i].isRTR) + ",");
-        json.concat("\"isExtended\": " + String(messages[i].isExtended) + ",");
-        json.concat("\"frequency\": " + String(messages[i].frequency));
-        json.concat("},");
+        if (messages[i].length > 0) {
+            pos--;  // Remove trailing comma
+        }
+        pos += snprintf(json + pos, bufferSize - pos, "],");
+
+        pos += snprintf(json + pos, bufferSize - pos, "\"isRTR\":%s,",
+                        messages[i].isRTR ? "true" : "false");
+        pos += snprintf(json + pos, bufferSize - pos, "\"isExtended\":%s,",
+                        messages[i].isExtended ? "true" : "false");
+        pos += snprintf(json + pos, bufferSize - pos, "\"frequency\":%u",
+                        messages[i].frequency);
+        pos += snprintf(json + pos, bufferSize - pos, "},");
     }
-    if (json.length() > 1) {
-        json.remove(json.length() - 1);
+    if (messageLength > 0) {
+        pos--;  // Remove trailing comma
     }
-    json.concat("]");
-    return json;
+    pos += snprintf(json + pos, bufferSize - pos, "]");
+
+    Serial.print("CreateJson: ");
+    Serial.println(micros() - startTime);
+
+    return String(json);  // Convert to String if necessary
 }
 
 int CanBus::getIndex(long canId) {
