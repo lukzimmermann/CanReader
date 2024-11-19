@@ -2,25 +2,19 @@
 #include <CanBus.h>
 #include <CanWebServer.h>
 #include <WiFi.h>
-
-#include "config.h"
+#include <Wireless.h>
 
 CanBus canBus;
+Wireless wireless;
 CanWebServer webServer(80);
 
 void setup() {
     Serial.begin(921600);
     canBus.begin();
+    wireless.begin();
 
-    WiFi.begin(SSID, PASSWORD);
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(500);
-    }
-
-    Serial.print("IP:  ");
-    Serial.println(WiFi.localIP());
-    Serial.print("Mac: ");
-    Serial.println(WiFi.macAddress());
+    Serial.println("IP:  " + wireless.getIpAddress());
+    Serial.println("Mac: " + wireless.getMacAddress());
 
     webServer.begin();
 }
