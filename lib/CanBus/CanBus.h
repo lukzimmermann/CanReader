@@ -18,8 +18,8 @@ struct CanMessage {
 class CanBus {
    public:
     void begin();
-    void update();
-    String getCanDataJson();
+    CanMessage* update();
+    int getMessageLength();
     void printCanMessage(long canId, CanMessage canMessage);
 
    private:
@@ -28,7 +28,6 @@ class CanBus {
     CanMessage createCanMessage(long id, int length, bool isRtr,
                                 bool isExtended);
     int getIndex(long canId);
-    void canMessageToString(CanMessage message);
 };
 
 #endif

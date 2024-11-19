@@ -7,13 +7,13 @@ url="http://10.0.0.203/raw-can"
 start_time=$(($(date +%s) * 1000 + $(date +%N | cut -b1-3)))
 
 # Number of requests
-number=1000
+number=100
 
 # Loop to make 100 requests
 for i in $(seq 1 $number)
 do
     # Make the GET request, suppress output with -s
-    curl -s "$url" > /dev/null
+    curl -s "$url"
 done
 
 # Get the end time in milliseconds (seconds + milliseconds)

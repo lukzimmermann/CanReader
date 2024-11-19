@@ -9,7 +9,7 @@ void CanBus::begin() {
     }
 }
 
-void CanBus::update() {
+CanMessage* CanBus::update() {
     int packetSize = CAN.parsePacket();
     if (packetSize) {
         int index = getIndex(CAN.packetId());
@@ -37,51 +37,10 @@ void CanBus::update() {
             }
         }
     }
+    return messages;
 }
 
-String CanBus::getCanDataJson() {
-    const unsigned long startTime = micros();
-
-    const int bufferSize = 8024;
-    char json[bufferSize];
-    int pos = 0;
-
-    pos += snprintf(json + pos, bufferSize - pos, "[");
-    for (int i = 0; i < messageLength; i++) {
-        pos += snprintf(json + pos, bufferSize - pos, "{");
-        pos += snprintf(json + pos, bufferSize - pos, "\"id\":%u,",
-                        messages[i].id);
-        pos += snprintf(json + pos, bufferSize - pos, "\"length\":%u,",
-                        messages[i].length);
-
-        pos += snprintf(json + pos, bufferSize - pos, "\"data\":[");
-        for (int j = 0; j < messages[i].length; j++) {
-            pos += snprintf(json + pos, bufferSize - pos, "%u,",
-                            messages[i].data[j]);
-        }
-        if (messages[i].length > 0) {
-            pos--;  // Remove trailing comma
-        }
-        pos += snprintf(json + pos, bufferSize - pos, "],");
-
-        pos += snprintf(json + pos, bufferSize - pos, "\"isRTR\":%s,",
-                        messages[i].isRTR ? "true" : "false");
-        pos += snprintf(json + pos, bufferSize - pos, "\"isExtended\":%s,",
-                        messages[i].isExtended ? "true" : "false");
-        pos += snprintf(json + pos, bufferSize - pos, "\"frequency\":%u",
-                        messages[i].frequency);
-        pos += snprintf(json + pos, bufferSize - pos, "},");
-    }
-    if (messageLength > 0) {
-        pos--;  // Remove trailing comma
-    }
-    pos += snprintf(json + pos, bufferSize - pos, "]");
-
-    Serial.print("CreateJson: ");
-    Serial.println(micros() - startTime);
-
-    return String(json);  // Convert to String if necessary
-}
+int CanBus::getMessageLength() { return messageLength; }
 
 int CanBus::getIndex(long canId) {
     for (int i = 0; i < MAX_MESSAGES; i++) {
@@ -100,26 +59,4 @@ CanMessage CanBus::createCanMessage(long id, int length, bool isRtr,
     canMessage.isExtended = isExtended;
     canMessage.time = micros();
     return canMessage;
-}
-
-void CanBus::printCanMessage(long canId, CanMessage canMessage) {
-    if (canMessage.id == canId) {
-        canMessageToString(canMessage);
-    }
-}
-
-void CanBus::canMessageToString(CanMessage message) {
-    Serial.println();
-    Serial.println("-----------------");
-    Serial.print("ID:         0x");
-    Serial.println(message.id, HEX);
-    Serial.println("-----------------");
-    Serial.print("Length:     ");
-    Serial.println(message.length);
-    Serial.print("IsExtended: ");
-    Serial.println(message.isExtended);
-    Serial.print("IsRTR:      ");
-    Serial.println(message.isRTR);
-    Serial.print("Frequency:  ");
-    Serial.println(message.frequency);
 }
