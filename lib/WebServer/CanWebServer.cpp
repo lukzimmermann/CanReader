@@ -37,13 +37,11 @@ void CanWebServer::setUpBackendServer() {
               [this](AsyncWebServerRequest* request) {
                   String canMessageJson = canDataToJson();
                   if (canMessageJson.length() > 0) {
-                      // Send the stored CAN message as JSON
                       AsyncWebServerResponse* response = request->beginResponse(
                           200, "application/json", canMessageJson);
                       response->addHeader("Access-Control-Allow-Origin", "*");
                       request->send(response);
                   } else {
-                      // Send a 404 error if no data is available
                       request->send(404, "application/json",
                                     "{\"error\":\"No CAN data available\"}");
                   }
@@ -106,30 +104,18 @@ void CanWebServer::setUpBackendServer() {
         String jsonString;
         serializeJson(jsonDoc, jsonString);
 
-        // Send the JSON response
         request->send(200, "application/json", jsonString);
     });
 
     server.on("/delete-file", HTTP_DELETE, [](AsyncWebServerRequest* request) {
-        // Check if the filename parameter is provided
         if (!request->hasParam("filename", true)) {
             request->send(400, "application/json",
                           "{\"error\":\"Filename not provided\"}");
             return;
         }
 
-        // Get the filename from the request
         String filename = request->getParam("filename", true)->value();
 
-        // Ensure the filename is in the /dbc directory
-        if (!filename.startsWith("/dbc/")) {
-            request->send(400, "application/json",
-                          "{\"error\":\"Invalid filename. Must be in "
-                          "/dbc directory.\"}");
-            return;
-        }
-
-        // Attempt to delete the file
         if (SPIFFS.exists(filename)) {
             if (SPIFFS.remove(filename)) {
                 request->send(200, "application/json",
@@ -145,25 +131,14 @@ void CanWebServer::setUpBackendServer() {
     });
 
     server.on("/get-file", HTTP_GET, [](AsyncWebServerRequest* request) {
-        // Check if the filename parameter is provided
         if (!request->hasParam("filename")) {
             request->send(400, "application/json",
                           "{\"error\":\"Filename not provided\"}");
             return;
         }
 
-        // Get the filename from the request
         String filename = request->getParam("filename")->value();
 
-        // Ensure the filename is in the /dbc directory
-        if (!filename.startsWith("/dbc/")) {
-            request->send(400, "application/json",
-                          "{\"error\":\"Invalid filename. Must be in /dbc "
-                          "directory.\"}");
-            return;
-        }
-
-        // Open the file for reading
         if (SPIFFS.exists(filename)) {
             File file = SPIFFS.open(filename, "r");
             if (!file) {
@@ -172,14 +147,12 @@ void CanWebServer::setUpBackendServer() {
                 return;
             }
 
-            // Read the file content
             String fileContent;
             while (file.available()) {
                 fileContent += char(file.read());
             }
             file.close();
 
-            // Send the file content as the response
             request->send(200, "text/plain", fileContent);
         } else {
             request->send(404, "application/json",
@@ -188,16 +161,12 @@ void CanWebServer::setUpBackendServer() {
     });
 
     server.on("/free-space", HTTP_GET, [](AsyncWebServerRequest* request) {
-        // ESP32 uses the following API
         size_t totalBytes = SPIFFS.totalBytes();
         size_t usedBytes = SPIFFS.usedBytes();
-        size_t freeBytes = totalBytes - usedBytes;
 
-        // Convert to kilobytes
-        size_t freeKB = freeBytes / 1024;
-
-        // Create a JSON response
-        String jsonResponse = "{\"free_space_kb\": " + String(freeKB) + "}";
+        String jsonResponse =
+            "{\"usedSpaceKB\": " + String(usedBytes / 1024) +
+            ", \"totalSpaceKB\": " + String(totalBytes / 1024) + "}";
         request->send(200, "application/json", jsonResponse);
     });
 }

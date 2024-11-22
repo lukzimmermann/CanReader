@@ -1,6 +1,6 @@
-import { CanFrame } from "../../interfaces/can";
-import { DbcCanFrame } from "../../interfaces/dbc";
-import { parseRawCanMessages } from "../../utils/parseRawCanMessage";
+import { CanFrame } from "../../../interfaces/can";
+import { DbcCanFrame } from "../../../interfaces/dbc";
+import { parseRawCanMessages } from "../../../utils/parseRawCanMessage";
 import CanMessageItem from "./canMessageItem";
 
 type Props = {

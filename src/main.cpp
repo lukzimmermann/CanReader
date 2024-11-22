@@ -9,14 +9,13 @@ Wireless wireless;
 CanWebServer webServer(80);
 
 void setup() {
-    Serial.begin(921600);
+    Serial.begin(115200);
     canBus.begin();
     wireless.begin();
+    webServer.begin();
 
     Serial.println("IP:  " + wireless.getIpAddress());
     Serial.println("Mac: " + wireless.getMacAddress());
-
-    webServer.begin();
 }
 
 void loop() {
