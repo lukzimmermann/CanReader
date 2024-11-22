@@ -25,7 +25,6 @@ function App() {
       <div className="relative flex flex-col items-center m-0 p-0">
         <Header onMenuClick={() => handleMenuClick()} />
         <MenuBar isOpen={isSidebarOpen} onCloseClick={handleCloseClick} />
-        {isSidebarOpen && <div onClick={handleCloseClick} className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>}
 
         <div className="flex w-screen px-5 justify-center"></div>
         <Routes>
@@ -35,6 +34,7 @@ function App() {
           <Route path="/contact" element={null} />
         </Routes>
       </div>
+      {isSidebarOpen && <div onClick={handleCloseClick} className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>}
     </Router>
   );
 }

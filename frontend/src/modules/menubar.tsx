@@ -46,6 +46,7 @@ function MenuBar({ onCloseClick, isOpen }: Props) {
             key={item.name}
             className={`${linkClasses} ${item.url === location.pathname ? "bg-purple-700" : ""}`}
             to={item.url}
+            onClick={onCloseClick}
           >
             {item.name}
           </Link>
