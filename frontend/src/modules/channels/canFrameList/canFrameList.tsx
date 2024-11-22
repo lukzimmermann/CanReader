@@ -1,4 +1,4 @@
-import { CanFrame } from "../../interfaces/can";
+import { CanFrame } from "../../../interfaces/can";
 import CanFrameItem from "./canFrameItem";
 
 type Props = {
